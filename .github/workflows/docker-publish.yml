@@ -9,6 +9,12 @@ on:
   pull_request:
     branches:
       - main
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: 'Custom tag for the build (optional)'
+        required: false
+        default: ''
 
 jobs:
   build-and-push:
